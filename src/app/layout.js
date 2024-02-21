@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from '@/components/navbar';
+import CircleTestDarkModeState from "@/components/CircleTestDarkModeState";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +15,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       
-      <div className='w-screen h-screen bg-red-500'>
-        <Navbar />
-        {children}
+      <div className='w-screen h-screen bg-gradient-to-b from-blue-100 to-red-200'>
+        <div className='h-24'>
+          <Navbar />
+        </div>
+        <div className='h-[calc(100vh - 6rem)]'>        
+          {children}
+
+          {/* <div className='flex items-center justify-center mt-[30%]'>
+            <CircleTestDarkModeState />
+          </div> */}          
+        </div>        
       </div>
       
       
