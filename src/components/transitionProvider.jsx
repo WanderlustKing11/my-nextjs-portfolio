@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import Navbar from "./navbar";
 import { usePathname } from 'next/navigation';
+import { FaHome } from "react-icons/fa";
 
 const TransitionProvider = ({children}) => {
 
@@ -31,7 +32,7 @@ const TransitionProvider = ({children}) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          {pathName === '/' ? "home" : pathName.substring(1)}
+          {pathName === '/' ? <FaHome /> : pathName.substring(1)}
         </motion.div>
 
         {/* TRANSITION PAGE OUT */}
