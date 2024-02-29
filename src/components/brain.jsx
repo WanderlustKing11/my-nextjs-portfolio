@@ -1188,8 +1188,8 @@ const Brain = ({scrollYProgress}) => {
                 <g
                   id="ls-cog26"
                   transform="translate(181)"
-                   fill="#FFF"
-                  fill='rgb(255,105,4)'  orange
+                  // fill="#FFF"
+                  fill='rgb(255,105,4)'  // orange
                   strokeWidth="2"
                 >
                   <motion.path
